@@ -1,0 +1,141 @@
+@use "mixins";
+@use "variables" as v;
+
+h2{
+    color: black;
+}
+
+h4{
+    text-align: center;
+    color: v.$secondary;
+    font-size: 1.5em;
+  }
+
+.black-arrow, .white-arrow{
+    color:black;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    &--white{
+        color: v.$primary;
+        font-size: 30px;
+    }
+}
+
+
+ul{
+    @include mixins.list-style;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+// .card-box{
+//    position: absolute;
+//    @include mixins.box;
+// }
+.container-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-text{
+    @include mixins.box-style;
+}
+
+.card-title{
+    text-align: center;
+         &--bold{
+        color: v.$secondary;
+       text-align: center;
+    }
+}
+
+.header{
+    @include mixins.center;
+     &--bold{
+         font-weight: bold;
+     }
+}
+.footer{
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    width: 100%;
+}
+.bi-quote{
+    font-size: x-large;
+    color: black;
+    display: block;
+    transform: rotate(180deg);
+    display: inline-block;
+    font-size: 30px;
+  }
+  
+
+  
+  .bi-twitter, .bi-instagram, .bi-facebook{
+    float: left;
+  }
+   .adress, .info, .social{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+ }
+
+  
+@media screen and (min-width: v.$desktop) {
+    body{
+        background-color: v.$primary;
+
+    }
+
+    .container-card{
+        display: flex;
+        flex-direction: row;
+        height:100vh;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: stretch;
+        width: 50%;
+        height: 400px;
+        //float: left;
+        
+    }
+
+
+.container-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title{
+text-align: center;
+}
+
+ .footer{
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    width: 100%;
+     }
+}

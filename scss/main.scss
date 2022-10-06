@@ -1,0 +1,12 @@
+@use "startpage";
+@use "about";
+@use "mixins";
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    font-family: serif, arial, sans-serif;
+    font-size: 12pt;
+}
+
+

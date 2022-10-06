@@ -1,0 +1,355 @@
+.card {
+  width: 80%;
+  height: auto;
+  color: black;
+  object-fit: cover;
+  vertical-align: top;
+  max-width: 100%;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.4s ease-in-out;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 80%;
+  margin: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button-down:hover {
+  transform: translate3d(0, 10px, 0);
+}
+
+h2 {
+  color: black;
+}
+
+h4 {
+  text-align: center;
+  color: black;
+  font-size: 1.5em;
+}
+
+.black-arrow, .white-arrow {
+  color: black;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.black-arrow--white, .white-arrow--white {
+  color: white;
+  font-size: 30px;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-text {
+  background-color: rgb(198, 197, 197);
+  border-radius: 5%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-title {
+  text-align: center;
+}
+.card-title--bold {
+  color: black;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header--bold {
+  font-weight: bold;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  width: 100%;
+}
+
+.bi-quote {
+  font-size: x-large;
+  color: black;
+  display: block;
+  transform: rotate(180deg);
+  display: inline-block;
+  font-size: 30px;
+}
+
+.bi-twitter, .bi-instagram, .bi-facebook {
+  float: left;
+}
+
+.adress, .info, .social {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-color: white;
+  }
+  .container-card {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    width: 50%;
+    height: 400px;
+  }
+  .container-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-title {
+    text-align: center;
+  }
+  .footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    text-decoration: none;
+    width: 100%;
+  }
+}
+html html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+body header {
+  position: relative;
+  height: 100vh;
+  background: url("/assets/negative-space-black-forest-dawn.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body .top-nav {
+  position: absolute;
+  top: 0%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #FFF;
+  height: 50px;
+  width: 100%;
+}
+body .menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+body .menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+  text-decoration: none;
+}
+body .menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body #menu-toggle {
+  display: none;
+}
+body .menu-button,
+body .menu-button::before,
+body .menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+body .menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+body .menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+body #menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+body #menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+body #menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+@media (max-width: 768px) {
+  body .menu-button-container {
+    display: flex;
+  }
+  body .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: "Times New Roman", Times, serif;
+  }
+  body #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  body #menu-toggle:checked ~ .menu li {
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  body .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+  }
+}
+body .text1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+body .main1 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body h1, body h2, body h3 {
+  color: white;
+  text-align: center;
+  vertical-align: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+li {
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.card-text__move {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+  border-radius: 5%;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .text2, .text3 {
+    position: relative;
+    top: 40%;
+    right: 60%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #section1 {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+  }
+  .main1, #section1 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: serif, arial, sans-serif;
+  font-size: 12pt;
+}
+
+/*# sourceMappingURL=main.css.map */
