@@ -1,6 +1,7 @@
 @use "startpage";
 @use "about";
 @use "mixins";
+@use "navbar";
 html {
     scroll-behavior: smooth;
   }
