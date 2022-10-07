@@ -2,7 +2,7 @@
 @use "variables" as v;
 
 h2{
-    color: black;
+    color: v.$secondary;
 }
 
 h4{
@@ -11,8 +11,8 @@ h4{
     font-size: 1.5em;
   }
 
-.black-arrow, .white-arrow{
-    color:black;
+.black-arrow, .main1{
+    color: v.$secondary;
     font-size: 30px;
     display: flex;
     justify-content: center;
@@ -22,7 +22,22 @@ h4{
         color: v.$primary;
         font-size: 30px;
     }
-}
+ }
+
+ .section1{
+
+    position: absolute;
+    //padding-top: 50%;
+    //display: flex;
+    //-content: center;
+    //align-items: flex-end;
+   // flex-direction: row;
+    //height: 30vh;
+    //padding-top: 90vh;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+ }
 
 
 ul{
@@ -38,6 +53,7 @@ ul{
 //    position: absolute;
 //    @include mixins.box;
 // }
+
 .container-card{
     display: flex;
     justify-content: center;
@@ -64,8 +80,8 @@ ul{
      }
 }
 .footer{
-    background-color: black;
-    color:white;
+    background-color: v.$secondary;
+    color: v.$primary;
     display: flex;
     justify-content: space-between;
     align-items: center;
